@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>NAV_BAR_SELF</title>
+        <!--외부스크립트와 연결-->
+        <script src="https://kit.fontawesome.com/36da751f2c.js" crossorigin="anonymous"></script>
+        <!--css파일과 연결-->
+        <link rel="stylesheet" href="style.css">
+        <!--font연결-->
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,700&display=swap" rel="stylesheet">        
+    </head>
+    <body>
+        <!--navbar지정-->
+        <nav class="navbar">
+
+            <!--좌측 지정-->
+            <div class="navbar_company">
+                <i class="fas fa-hotel"></i>
+                <a href="#">SSHotel</a>
+            </div>
+
+            <!--중앙 menu 지정-->
+            <!--일렬정렬위해 div태그보다 순서있는 ul태그-->
+            <!--순서 지정하는 건 li 뒤에 a / i etc..태그를 지정-->
+            <ul class="navbar_menu">
+                    <li><a hfef="">Reservation</a></li>
+                    <li><a hfef="">Introduction</a></li>
+                    <li><a hfef="">Wedding&Convention</a></li>
+                    <li><a hfef="">FAQ</a></li>   
+            </ul>
+            <!--우측 sns 지정-->
+            <ul class="navbar_sns">
+                <li><i class="fab fa-instagram-square"></i></li>
+                <li><i class="fab fa-facebook-square"></i></li>
+                <li><i class="fab fa-twitter"></i></li>
+            </ul>
+            <!--햄버거 메뉴-->
+            <!--href=#하면 클릭시 새로고침안됨-->
+            <a href="#" class="navbar_toggleBtn">
+                <i class="fas fa-bars"></i>            
+            </a>
+            
+        </nav>
+    </body>
+</html>

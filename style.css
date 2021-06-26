@@ -1,0 +1,102 @@
+:root {
+  --text-color: #4b2c20;
+  --background-color: #fbe9e7;
+  --accent-color: #6d01a7;
+}
+
+body {
+  margin: 0; /*바디태그 margin default값으로 흰선. 제거*/
+  font-family: "Open Sans", sans-serif;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--background-color);
+  padding: 8px 15px;
+}
+
+.navbar_company {
+  font-size: 24px;
+}
+
+.navbar_company i {
+  /*accent color지정해야함*/
+  color: var(--accent-color);
+}
+.navbar_company a {
+  color: var(--text-color);
+  padding-left: 10px;
+  text-decoration: none; /* 밑줄 효과 없앰*/
+}
+
+.navbar_menu {
+  display: flex; /*메뉴일렬로 배치*/
+  list-style: none; /*ul태그 점 없앰*/
+  padding-left: 0%;
+}
+
+.navbar_menu li {
+  padding: 8px 12px; /*마우스 클릭영역확보*/
+  color: var(--text-color);
+  font-size: 18px;
+}
+
+.navbar_menu li:hover {
+  background-color: #fffde7;
+  border-radius: 4px; /*테두리 둥글게*/
+}
+
+.navbar_sns {
+  /*accent color지정해야함*/
+  padding-left: 0; /*가운데 정렬*/
+  list-style: none; /*ul 태그로 생긴 점 없앰*/
+  display: flex; /*메뉴 일렬로 배치*/
+  color: var(--text-color);
+}
+
+.navbar_sns li {
+  padding: 8px 4px;
+}
+
+.navbar_toggleBtn {
+  display: none; /*일반 사이즈에서 안나타남*/
+}
+
+/*반응형으로 만들 때 media query 사용. 
+특정 사이즈 이하 될 경우 메뉴가 세로 직렬 되도록 만들기*/
+
+@media screen and (max-width: 768px) {
+  /*메뉴바 세로로 나오도록 지정*/
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start; /*로고,메뉴바 모두 왼쪽 정렬되도록*/
+    padding: 8px 24px; /*hover시 한줄 가득 색상 표시*/
+  }
+
+  .navbar_menu {
+    flex-direction: column;
+    align-items: center;
+    width: 100%; /*content의 가운데로 오게 만듦*/
+  }
+
+  /*menu hover했을 때 background 넓게 지정*/
+  .navbar_menu li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar_sns {
+    justify-content: center; /*row이고 가운데로 가게 함*/
+    width: 100%; /*content의 가운데로 오게 만듦*/
+    padding-left: 0; /*중간정렬*/
+  }
+
+  .navbar_toggleBtn {
+    position: absolute; /*소속된 배치와 무관하게 container안에서 위치 설정*/
+    right: 15px; /*우측에서 15px 띄움*/
+    font-size: 24px;
+    color: var(--accent-color);
+    display: block; /*width780이하에서 나오도록 지정*/
+  }
+}
